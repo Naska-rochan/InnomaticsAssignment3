@@ -1,0 +1,107 @@
+/* Global Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "content"
+      "signup"
+      "feature"
+      "feature";
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 1200px;
+  }
+  
+  /* Header Styling */
+  .header {
+    grid-area: header;
+    background-color: #2196f3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 8px;
+  }
+  
+  /* Content Styling */
+  .content {
+    grid-area: content;
+    background-color: #e3f2fd;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+  
+  /* Sign Up Section Styling */
+  .signup {
+    grid-area: signup;
+    background-color: #f0f4c3;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .signup form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .signup input,
+  .signup button {
+    padding: 10px;
+    border: 1px solid #cfd8dc;
+    border-radius: 4px;
+  }
+  
+  .signup button {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .signup button:hover {
+    background-color: #388e3c;
+  }
+  
+  /* Feature Section Styling */
+  .feature {
+    background-color: #ffccbc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 768px) {
+    .container {
+      grid-template-areas:
+        "header header"
+        "content signup"
+        "feature feature";
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      grid-template-areas:
+        "header header header"
+        "feature feature feature"
+        "signup signup signup"
+        "content content content";
+    }
+  }
+  
